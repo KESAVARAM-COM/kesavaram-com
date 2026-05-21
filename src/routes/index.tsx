@@ -1,26 +1,84 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ShieldCheck, Leaf, MessageCircle, Sparkles, ShoppingBag } from "lucide-react";
+import logo from "@/assets/kesavaram-logo.png";
+import hero from "@/assets/hero-herbs.jpg";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "Kesavaram.co — Healing. Naturally. Delivered to You." },
+      { name: "description", content: "Authentic Siddha products and expert massage services in Dindigul. Order on WhatsApp." },
+      { property: "og:title", content: "Kesavaram.co — Healing. Naturally. Delivered to You." },
+      { property: "og:description", content: "Authentic Siddha products and expert massage services. Just a WhatsApp away." },
+    ],
+  }),
+  component: Home,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
+function Home() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="bg-gradient-green text-[var(--cream)]">
+      <section className="relative overflow-hidden px-6 pb-12 pt-10 text-center">
+        <div className="pointer-events-none absolute inset-0 opacity-20" style={{ backgroundImage: `url(${hero})`, backgroundSize: "cover", backgroundPosition: "center" }} />
+        <div className="relative">
+          <img src={logo} alt="Kesavaram.co lotus logo" className="mx-auto h-28 w-28 object-contain drop-shadow-[0_4px_20px_rgba(0,0,0,0.4)]" width={112} height={112} />
+          <h1 className="mt-3 font-heading text-2xl tracking-[0.22em] text-[var(--gold)]">
+            KESAVARAM<span className="text-[var(--cream)]/70">.CO</span>
+          </h1>
+
+          <h2 className="mt-10 font-heading text-3xl leading-snug text-[var(--cream)]">
+            Healing. Naturally.<br />Delivered to You.
+          </h2>
+          <p className="mx-auto mt-4 max-w-xs text-sm leading-relaxed text-[var(--cream)]/80">
+            Authentic Siddha products and expert massage services. Just a WhatsApp away.
+          </p>
+
+          <div className="mt-10 grid grid-cols-3 gap-3">
+            <Badge icon={MessageCircle} label="Chat to Order" />
+            <Badge icon={ShieldCheck} label="Secure & Safe" />
+            <Badge icon={Leaf} label="Natural & Trusted" />
+          </div>
+
+          <div className="mt-10">
+            <WhatsAppButton message="Hi Kesavaram.co, I'd like to continue on WhatsApp." label="Continue with WhatsApp" variant="gold" />
+            <p className="mt-3 text-[0.7rem] tracking-wide text-[var(--gold-soft)]">
+              <span className="text-[var(--gold)]">✦</span> 100% Secure · Fast · Reliable
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="rounded-t-[2rem] bg-background px-5 pb-10 pt-8 text-foreground">
+        <h3 className="font-heading text-xl tracking-wide text-primary">Explore Kesavaram</h3>
+        <div className="mt-4 grid grid-cols-2 gap-3">
+          <ShortcutCard to="/products" icon={ShoppingBag} title="Shop Products" subtitle="Oils · Drugs · Pooja" />
+          <ShortcutCard to="/services" icon={Sparkles} title="Book Massage" subtitle="At your doorstep" />
+        </div>
+      </section>
     </div>
   );
 }
 
-function Index() {
-  return <PlaceholderIndex />;
+function Badge({ icon: Icon, label }: { icon: React.ComponentType<{ className?: string }>; label: string }) {
+  return (
+    <div className="flex flex-col items-center gap-2">
+      <div className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--gold)]/40 bg-[var(--gold)]/10">
+        <Icon className="h-5 w-5 text-[var(--gold)]" />
+      </div>
+      <span className="text-[0.7rem] font-semibold leading-tight text-[var(--cream)]/85">{label}</span>
+    </div>
+  );
+}
+
+function ShortcutCard({ to, icon: Icon, title, subtitle }: { to: string; icon: React.ComponentType<{ className?: string }>; title: string; subtitle: string }) {
+  return (
+    <Link to={to} className="group rounded-2xl bg-gradient-cream p-4 shadow-soft ring-1 ring-[var(--gold-soft)] transition active:scale-[0.98]">
+      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-gold text-primary shadow-gold">
+        <Icon className="h-5 w-5" />
+      </div>
+      <p className="mt-3 font-heading text-base text-primary">{title}</p>
+      <p className="text-xs text-muted-foreground">{subtitle}</p>
+    </Link>
+  );
 }
