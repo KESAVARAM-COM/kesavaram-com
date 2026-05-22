@@ -28,7 +28,7 @@ function ServicesPage() {
   return (
     <div className="px-4 pt-6">
       <div className="overflow-hidden rounded-2xl bg-gradient-cream shadow-soft ring-1 ring-[var(--gold-soft)]">
-        <img src={serviceImg} alt="Therapeutic massage" loading="lazy" width={1600} height={1024} className="h-56 w-full object-cover" />
+        <img src={serviceImg} alt="Therapeutic massage" loading="lazy" width={1600} height={1024} className="h-56 w-full object-contain" />
         <div className="p-5">
           <h1 className="font-heading text-2xl text-primary">Full Body Therapeutic Massage</h1>
           <div className="mt-2 flex items-center gap-3">
