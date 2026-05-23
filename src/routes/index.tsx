@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ShieldCheck, Leaf, MessageCircle, Sparkles, ShoppingBag } from "lucide-react";
+import { ShieldCheck, Leaf, MessageCircle, Sparkles, ShoppingBag, Youtube, ExternalLink } from "lucide-react";
 import logo from "@/assets/kesavaram-logo.png";
 import hero from "@/assets/hero-herbs.jpg";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
