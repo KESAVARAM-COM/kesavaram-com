@@ -55,6 +55,33 @@ function Home() {
           <ShortcutCard to="/products" icon={ShoppingBag} title="Shop Products" subtitle="Oils · Drugs · Pooja" />
           <ShortcutCard to="/services" icon={Sparkles} title="Book Massage" subtitle="At your doorstep" />
         </div>
+
+        <div className="mt-8">
+          <div className="flex items-center justify-between">
+            <h3 className="font-heading text-xl tracking-wide text-primary">Featured Video</h3>
+            <a
+              href="http://www.youtube.com/@kesavaram252"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-full bg-gradient-gold px-3 py-1.5 text-xs font-bold text-primary shadow-gold"
+            >
+              <Youtube className="h-3.5 w-3.5" /> Kesavaram TV
+              <ExternalLink className="h-3 w-3" />
+            </a>
+          </div>
+          <div className="mt-3 overflow-hidden rounded-2xl shadow-soft ring-1 ring-[var(--gold-soft)]">
+            <div className="relative aspect-video w-full bg-black">
+              <iframe
+                src="https://www.youtube.com/embed/XRDQpZQYHMw"
+                title="Kesavaram TV — Featured Video"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 h-full w-full"
+              />
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );
