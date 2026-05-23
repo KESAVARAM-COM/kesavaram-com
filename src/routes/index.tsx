@@ -78,7 +78,7 @@ function Home() {
           <div className="mt-3 overflow-hidden rounded-2xl shadow-soft ring-1 ring-[var(--gold-soft)]">
             <div className="relative aspect-video w-full bg-black">
               <iframe
-                src="https://www.youtube.com/embed/XRDQpZQYHMw"
+                src="https://www.youtube.com/embed/b2FBKtj_BZg"
                 title="Kesavaram TV — Featured Video"
                 loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
