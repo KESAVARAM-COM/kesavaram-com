@@ -54,21 +54,27 @@ function Home() {
         <div className="mt-4 grid grid-cols-2 gap-3">
           <ShortcutCard to="/products" icon={ShoppingBag} title="Shop Products" subtitle="Oils · Drugs · Pooja" />
           <ShortcutCard to="/services" icon={Sparkles} title="Book Massage" subtitle="At your doorstep" />
+          <a
+            href="http://www.youtube.com/@kesavaram252"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group col-span-2 rounded-2xl bg-gradient-cream p-4 shadow-soft ring-1 ring-[var(--gold-soft)] transition active:scale-[0.98]"
+          >
+            <div className="flex items-center justify-between">
+              <div>
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-gold text-primary shadow-gold">
+                  <Youtube className="h-5 w-5" />
+                </div>
+                <p className="mt-3 font-heading text-base text-primary">Kesavaram TV</p>
+                <p className="text-xs text-muted-foreground">Watch on YouTube</p>
+              </div>
+              <ExternalLink className="h-4 w-4 text-primary/60" />
+            </div>
+          </a>
         </div>
 
         <div className="mt-8">
-          <div className="flex items-center justify-between">
-            <h3 className="font-heading text-xl tracking-wide text-primary">Featured Video</h3>
-            <a
-              href="http://www.youtube.com/@kesavaram252"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-full bg-gradient-gold px-3 py-1.5 text-xs font-bold text-primary shadow-gold"
-            >
-              <Youtube className="h-3.5 w-3.5" /> Kesavaram TV
-              <ExternalLink className="h-3 w-3" />
-            </a>
-          </div>
+          <h3 className="font-heading text-xl tracking-wide text-primary">Featured Video</h3>
           <div className="mt-3 overflow-hidden rounded-2xl shadow-soft ring-1 ring-[var(--gold-soft)]">
             <div className="relative aspect-video w-full bg-black">
               <iframe
