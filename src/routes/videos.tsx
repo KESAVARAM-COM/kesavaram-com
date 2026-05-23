@@ -43,20 +43,32 @@ function VideosPage() {
 
       <div className="mt-6">
         <h2 className="font-heading text-lg text-primary">Channel Preview</h2>
-        <div className="mt-3 overflow-hidden rounded-2xl shadow-soft ring-1 ring-[var(--gold-soft)]">
-          <div className="relative aspect-video w-full bg-[var(--cream)]">
-            <iframe
-              src="https://www.youtube.com/embed?listType=user_uploads&list=kesavaram252"
-              title="Kesavaram.co — YouTube uploads"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="absolute inset-0 h-full w-full"
-            />
-          </div>
+        <div className="mt-3 space-y-4">
+          {[
+            { id: "XRDQpZQYHMw", title: "Kesavaram.co — Featured" },
+            { id: "b2FBKtj_BZg", title: "Kesavaram.co — Video 2" },
+            { id: "iZmPspC5zWU", title: "Kesavaram.co — Video 3" },
+            { id: "bNKL3w_ivIA", title: "Kesavaram.co — Video 4" },
+          ].map((v) => (
+            <div
+              key={v.id}
+              className="overflow-hidden rounded-2xl shadow-soft ring-1 ring-[var(--gold-soft)]"
+            >
+              <div className="relative aspect-video w-full bg-[var(--cream)]">
+                <iframe
+                  src={`https://www.youtube.com/embed/${v.id}`}
+                  title={v.title}
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 h-full w-full"
+                />
+              </div>
+            </div>
+          ))}
         </div>
         <p className="mt-2 text-xs text-muted-foreground">
-          If the player doesn't load, tap the channel card above to open YouTube directly.
+          If a player doesn't load, tap the channel card above to open YouTube directly.
         </p>
       </div>
     </div>
