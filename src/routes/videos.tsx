@@ -34,7 +34,7 @@ function VideosPage() {
             <Youtube className="h-5 w-5" />
           </span>
           <span>
-            <span className="block font-heading text-sm tracking-widest text-[var(--gold)]">@kesavaram252</span>
+            <span className="block font-heading text-sm tracking-widest text-[var(--gold)]">KESAVARAM TV</span>
             <span className="block text-xs text-[var(--cream)]/70">Visit our YouTube channel</span>
           </span>
         </span>
