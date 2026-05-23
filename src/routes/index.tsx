@@ -22,7 +22,7 @@ function Home() {
       <section className="relative overflow-hidden px-6 pb-12 pt-10 text-center">
         <div className="pointer-events-none absolute inset-0 opacity-20" style={{ backgroundImage: `url(${hero})`, backgroundSize: "cover", backgroundPosition: "center" }} />
         <div className="relative">
-          <img src={logo} alt="Kesavaram.co lotus logo" className="relative text-center object-cover" width={112} height={112} />
+          <img src={logo} alt="Kesavaram.co lotus logo" className="relative object-cover text-center shadow-none" width={112} height={112} />
           <h1 className="mt-3 font-heading text-2xl tracking-[0.22em] text-[var(--gold)]">
             KESAVARAM<span className="text-[var(--cream)]/70">.CO</span>
           </h1>
