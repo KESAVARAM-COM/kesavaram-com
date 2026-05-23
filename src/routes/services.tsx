@@ -27,6 +27,12 @@ function ServicesPage() {
 
   return (
     <div className="px-4 pt-6">
+      <div className="mb-4 rounded-2xl bg-gradient-gold p-5 text-center shadow-gold ring-1 ring-[var(--gold)]">
+        <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-primary/70">Lead Therapist</p>
+        <h2 className="mt-2 font-heading text-xl leading-tight text-primary sm:text-2xl">
+          C. SARAVANAPERUMAL VARMA ASAN
+        </h2>
+      </div>
       <div className="overflow-hidden rounded-2xl bg-gradient-cream shadow-soft ring-1 ring-[var(--gold-soft)]">
         <img src={serviceImg} alt="Therapeutic massage" loading="lazy" width={1600} height={1024} className="h-56 w-full object-contain" />
         <div className="p-5">
