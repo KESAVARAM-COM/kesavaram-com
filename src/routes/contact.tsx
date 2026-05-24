@@ -6,9 +6,9 @@ import { PHONE_DISPLAY, WHATSAPP_NUMBER } from "@/lib/whatsapp";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Kesavaram.co (Dindigul)" },
-      { name: "description", content: "Reach Kesavaram.co in Dindigul, Tamil Nadu. WhatsApp +91 81243 56824 for orders, bookings and questions." },
-      { property: "og:title", content: "Contact Kesavaram.co" },
+      { title: "Contact — Kesavaram (Dindigul)" },
+      { name: "description", content: "Reach Kesavaram in Dindigul, Tamil Nadu. WhatsApp +91 81243 56824 for orders, bookings and questions." },
+      { property: "og:title", content: "Contact Kesavaram" },
       { property: "og:description", content: "Dindigul-based Siddha wellness brand. Reach us on WhatsApp." },
     ],
     scripts: [
@@ -17,7 +17,7 @@ export const Route = createFileRoute("/contact")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
-          name: "Kesavaram.co",
+          name: "Kesavaram",
           description: "Authentic Siddha products and expert massage services",
           telephone: "+91 81243 56824",
           address: {
@@ -77,7 +77,7 @@ function ContactPage() {
 
       <div className="mt-6">
         <WhatsAppButton
-          message="Hi Kesavaram.co, I'd like to get in touch."
+          message="Hi Kesavaram, I'd like to get in touch."
           label="Chat on WhatsApp"
           variant="gold"
         />

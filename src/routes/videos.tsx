@@ -4,9 +4,9 @@ import { Youtube, ExternalLink } from "lucide-react";
 export const Route = createFileRoute("/videos")({
   head: () => ({
     meta: [
-      { title: "Videos — Kesavaram.co" },
-      { name: "description", content: "Watch Kesavaram.co videos: Siddha product reviews, massage techniques, and wellness tips." },
-      { property: "og:title", content: "Videos — Kesavaram.co" },
+      { title: "Videos — Kesavaram" },
+      { name: "description", content: "Watch Kesavaram videos: Siddha product reviews, massage techniques, and wellness tips." },
+      { property: "og:title", content: "Videos — Kesavaram" },
       { property: "og:description", content: "Our YouTube channel: product showcases and massage tutorials." },
     ],
   }),
@@ -45,10 +45,10 @@ function VideosPage() {
         <h2 className="font-heading text-lg text-primary">Channel Preview</h2>
         <div className="mt-3 space-y-4">
           {[
-            { id: "XRDQpZQYHMw", title: "Kesavaram.co — Featured" },
-            { id: "b2FBKtj_BZg", title: "Kesavaram.co — Video 2" },
-            { id: "iZmPspC5zWU", title: "Kesavaram.co — Video 3" },
-            { id: "bNKL3w_ivIA", title: "Kesavaram.co — Video 4" },
+            { id: "XRDQpZQYHMw", title: "Kesavaram — Featured" },
+            { id: "b2FBKtj_BZg", title: "Kesavaram — Video 2" },
+            { id: "iZmPspC5zWU", title: "Kesavaram — Video 3" },
+            { id: "bNKL3w_ivIA", title: "Kesavaram — Video 4" },
           ].map((v) => (
             <div
               key={v.id}

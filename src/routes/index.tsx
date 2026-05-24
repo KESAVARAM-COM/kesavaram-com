@@ -7,9 +7,9 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Kesavaram.co — Healing. Naturally. Delivered to You." },
+      { title: "Kesavaram — Healing. Naturally. Delivered to You." },
       { name: "description", content: "Authentic Siddha products and expert massage services in Dindigul. Order on WhatsApp." },
-      { property: "og:title", content: "Kesavaram.co — Healing. Naturally. Delivered to You." },
+      { property: "og:title", content: "Kesavaram — Healing. Naturally. Delivered to You." },
       { property: "og:description", content: "Authentic Siddha products and expert massage services. Just a WhatsApp away." },
     ],
   }),
@@ -22,9 +22,9 @@ function Home() {
       <section className="relative overflow-hidden px-6 pb-12 pt-10 text-center">
         <div className="pointer-events-none absolute inset-0 opacity-20" style={{ backgroundImage: `url(${hero})`, backgroundSize: "cover", backgroundPosition: "center" }} />
         <div className="relative">
-          <img src={logo} alt="Kesavaram.co lotus logo" className="relative object-cover text-center shadow-none" width={112} height={112} />
+          <img src={logo} alt="Kesavaram lotus logo" className="relative object-cover text-center shadow-none" width={112} height={112} />
           <h1 className="mt-3 font-heading text-2xl tracking-[0.22em] text-[var(--gold)]">
-            KESAVARAM<span className="text-[var(--cream)]/70">.CO</span>
+            KESAVARAM
           </h1>
 
           <h2 className="mt-10 font-heading text-3xl leading-snug text-[var(--cream)]">
@@ -41,7 +41,7 @@ function Home() {
           </div>
 
           <div className="mt-10">
-            <WhatsAppButton message="Hi Kesavaram.co, I'd like to continue on WhatsApp." label="Continue with WhatsApp" variant="gold" />
+            <WhatsAppButton message="Hi Kesavaram, I'd like to continue on WhatsApp." label="Continue with WhatsApp" variant="gold" />
             <p className="mt-3 text-[0.7rem] tracking-wide text-[var(--gold-soft)]">
               <span className="text-[var(--gold)]">✦</span> 100% Secure · Fast · Reliable
             </p>

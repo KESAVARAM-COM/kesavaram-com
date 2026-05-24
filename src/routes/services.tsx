@@ -7,9 +7,9 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Massage Services — Kesavaram.co" },
+      { title: "Massage Services — Kesavaram" },
       { name: "description", content: "Book an expert Siddha therapeutic massage at your doorstep in Dindigul. 60 or 90 minute sessions." },
-      { property: "og:title", content: "Massage Services — Kesavaram.co" },
+      { property: "og:title", content: "Massage Services — Kesavaram" },
       { property: "og:description", content: "Full body therapeutic massage at your doorstep. Available for men & women." },
     ],
   }),
@@ -80,7 +80,7 @@ function ServicesPage() {
 
           <div className="mt-5">
             <WhatsAppButton
-              message={`Hi Kesavaram.co, I'd like to book the Full Body Therapeutic Massage (${selected.mins} mins, ₹${selected.price}). Please share available slots.`}
+              message={`Hi Kesavaram, I'd like to book the Full Body Therapeutic Massage (${selected.mins} mins, ₹${selected.price}). Please share available slots.`}
               label="Chat on WhatsApp to Book"
             />
           </div>

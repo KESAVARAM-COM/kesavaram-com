@@ -6,9 +6,9 @@ export function TopBar({ title }: { title?: string }) {
     <header className="sticky top-0 z-30 border-b border-[var(--gold-soft)] bg-gradient-green text-[var(--cream)] shadow-soft">
       <div className="mx-auto flex max-w-xl items-center justify-between px-4 py-3">
         <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="Kesavaram.co" className="h-14 w-14 object-contain" width={56} height={56} />
+          <img src={logo} alt="Kesavaram" className="h-14 w-14 object-contain" width={56} height={56} />
           <span className="font-heading text-base tracking-[0.18em] text-[var(--gold)]">
-            KESAVARAM<span className="text-[var(--cream)]/70">.CO</span>
+            KESAVARAM
           </span>
         </Link>
         {title && (
