@@ -22,9 +22,21 @@ const durations = [
   { mins: 90, price: 1499 },
 ] as const;
 
+const oilAddons = [
+  { id: "siddha-blend", name: "Siddha Herbal Blend Oil (multiple Siddha ingredients)", price: 250 },
+  { id: "santhanathi", name: "Santhanathi Thailam", price: 300 },
+] as const;
+
+type OilId = (typeof oilAddons)[number]["id"];
+
 function ServicesPage() {
   const [pick, setPick] = useState<60 | 90>(60);
+  const [oils, setOils] = useState<OilId[]>([]);
   const selected = durations.find((d) => d.mins === pick)!;
+  const oilsTotal = oilAddons.filter((o) => oils.includes(o.id)).reduce((s, o) => s + o.price, 0);
+  const grandTotal = selected.price + oilsTotal;
+  const selectedOilNames = oilAddons.filter((o) => oils.includes(o.id)).map((o) => o.name);
+
 
   return (
     <div className="px-4 pt-6">
@@ -120,11 +132,51 @@ function ServicesPage() {
           </div>
 
           <div className="mt-5">
+            <p className="text-xs font-bold tracking-wide text-primary/80">Add-on Oils (optional)</p>
+            <div className="mt-2 space-y-2">
+              {oilAddons.map((o) => {
+                const isOn = oils.includes(o.id);
+                return (
+                  <button
+                    key={o.id}
+                    onClick={() =>
+                      setOils((prev) => (isOn ? prev.filter((x) => x !== o.id) : [...prev, o.id]))
+                    }
+                    className={`flex w-full items-center justify-between gap-3 rounded-xl border px-4 py-3 text-left transition ${
+                      isOn
+                        ? "border-[var(--gold)] bg-gradient-gold text-primary shadow-gold"
+                        : "border-[var(--gold-soft)] bg-[var(--cream)] text-primary hover:border-[var(--gold)]"
+                    }`}
+                  >
+                    <span className="flex items-center gap-2 text-sm font-bold">
+                      <span
+                        className={`flex h-5 w-5 items-center justify-center rounded-md border ${
+                          isOn ? "border-primary bg-primary text-white" : "border-[var(--gold)] bg-white"
+                        }`}
+                      >
+                        {isOn ? "✓" : ""}
+                      </span>
+                      {o.name}
+                    </span>
+                    <span className="text-sm font-extrabold">₹{o.price}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="mt-5 flex items-center justify-between rounded-xl bg-[var(--cream)] px-4 py-3 ring-1 ring-[var(--gold-soft)]">
+            <span className="text-xs font-bold uppercase tracking-wider text-primary/70">Total</span>
+            <span className="text-xl font-extrabold text-primary">₹{grandTotal}</span>
+          </div>
+
+          <div className="mt-4">
             <WhatsAppButton
-              message={`Hi Kesavaram, I'd like to book the Full Body Therapeutic Massage (${selected.mins} mins, ₹${selected.price}). Please share available slots.`}
+              message={`Hi Kesavaram, I'd like to book the Full Body Therapeutic Massage (${selected.mins} mins, ₹${selected.price})${selectedOilNames.length ? ` with add-on oils: ${selectedOilNames.join(", ")} (+₹${oilsTotal})` : ""}. Total: ₹${grandTotal}. Please share available slots.`}
               label="Chat on WhatsApp to Book"
             />
           </div>
+
         </div>
       </div>
 
