@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { UserCheck, Home, ShieldCheck, Users, Clock, Star } from "lucide-react";
+import { UserCheck, Home, ShieldCheck, Users, Clock, Star, Phone, Flame, Sparkles } from "lucide-react";
 import serviceImg from "@/assets/service-massage.jpg";
+import poojasImg from "@/assets/poojas-homams.jpg";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export const Route = createFileRoute("/services")({
