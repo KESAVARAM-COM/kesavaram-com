@@ -4,7 +4,7 @@ import { waLink } from "@/lib/whatsapp";
 export function WhatsAppFloat() {
   return (
     <a
-      href={waLink("Hi Kesavaram.co, I'd like to know more.")}
+      href={waLink("Hi Kesavaram, I'd like to know more.")}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"

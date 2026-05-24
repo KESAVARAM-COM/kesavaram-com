@@ -7,9 +7,9 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 export const Route = createFileRoute("/products")({
   head: () => ({
     meta: [
-      { title: "Shop — Kesavaram.co" },
+      { title: "Shop — Kesavaram" },
       { name: "description", content: "Browse authentic Siddha massage oils, herbal medicines, and Hindu devotional items. Order on WhatsApp." },
-      { property: "og:title", content: "Shop — Kesavaram.co" },
+      { property: "og:title", content: "Shop — Kesavaram" },
       { property: "og:description", content: "Massage oils, Siddha drugs and devotional items — order directly on WhatsApp." },
     ],
   }),
@@ -76,7 +76,7 @@ function ProductCard({ product }: { product: Product }) {
         <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{product.description}</p>
         <div className="mt-3">
           <WhatsAppButton
-            message={`Hi Kesavaram.co, I'd like to order ${product.name} (₹${product.price}). Please share availability.`}
+            message={`Hi Kesavaram, I'd like to order ${product.name} (₹${product.price}). Please share availability.`}
             label="Chat on WhatsApp to Order"
           />
         </div>
