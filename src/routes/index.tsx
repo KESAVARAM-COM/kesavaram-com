@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ShieldCheck, Leaf, MessageCircle, Sparkles, ShoppingBag, Youtube, ExternalLink } from "lucide-react";
+import { ShieldCheck, Leaf, MessageCircle, Sparkles, ShoppingBag, Youtube, ExternalLink, Phone } from "lucide-react";
 import logo from "@/assets/kesavaram-logo.png";
 import hero from "@/assets/hero-herbs.jpg";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
@@ -40,7 +40,17 @@ function Home() {
             <Badge icon={Leaf} label="Natural & Trusted" />
           </div>
 
-          <div className="mt-10">
+          <div className="mt-10 space-y-4">
+            <p className="rounded-2xl border border-[var(--gold)]/30 bg-[var(--gold)]/10 px-4 py-3 text-xs leading-relaxed text-[var(--cream)]/90">
+              Call for Poojas and Homams. Free consultation for health, how to live our life properly by Siddhars' words, and all health-related information.
+            </p>
+            <a
+              href="tel:+918124356824"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[var(--accent)] px-5 py-4 text-base font-bold tracking-wide text-white shadow-soft transition active:scale-[0.98] hover:brightness-110"
+            >
+              <Phone className="h-5 w-5" />
+              Call Now: 8124356824
+            </a>
             <WhatsAppButton message="Hi Kesavaram, I'd like to continue on WhatsApp." label="Continue with WhatsApp" variant="gold" />
             <p className="mt-3 text-[0.7rem] tracking-wide text-[var(--gold-soft)]">
               <span className="text-[var(--gold)]">✦</span> 100% Secure · Fast · Reliable
