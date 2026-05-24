@@ -22,9 +22,21 @@ const durations = [
   { mins: 90, price: 1499 },
 ] as const;
 
+const oilAddons = [
+  { id: "siddha-blend", name: "Siddha Herbal Blend Oil (multiple Siddha ingredients)", price: 250 },
+  { id: "santhanathi", name: "Santhanathi Thailam", price: 300 },
+] as const;
+
+type OilId = (typeof oilAddons)[number]["id"];
+
 function ServicesPage() {
   const [pick, setPick] = useState<60 | 90>(60);
+  const [oils, setOils] = useState<OilId[]>([]);
   const selected = durations.find((d) => d.mins === pick)!;
+  const oilsTotal = oilAddons.filter((o) => oils.includes(o.id)).reduce((s, o) => s + o.price, 0);
+  const grandTotal = selected.price + oilsTotal;
+  const selectedOilNames = oilAddons.filter((o) => oils.includes(o.id)).map((o) => o.name);
+
 
   return (
     <div className="px-4 pt-6">
