@@ -28,6 +28,46 @@ function ServicesPage() {
 
   return (
     <div className="px-4 pt-6">
+      {/* Poojas & Homams Featured Service */}
+      <div className="mb-5 overflow-hidden rounded-2xl bg-gradient-cream shadow-soft ring-1 ring-[var(--gold)]">
+        <div className="relative">
+          <img src={poojasImg} alt="Poojas and Homams by C. Saravanaperumal Gurukal" loading="lazy" className="h-56 w-full object-cover" />
+          <div className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-gradient-gold px-3 py-1 text-[0.65rem] font-bold uppercase tracking-wider text-primary shadow-gold">
+            <Sparkles className="h-3 w-3" /> Featured
+          </div>
+        </div>
+        <div className="p-5">
+          <div className="flex items-center gap-2 text-[var(--gold)]">
+            <Flame className="h-5 w-5" />
+            <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em]">Sacred Rituals</span>
+          </div>
+          <h1 className="mt-2 font-heading text-2xl leading-tight text-primary">Poojas & Homams</h1>
+          <p className="mt-1 text-sm font-semibold text-primary/80">By C. Saravanaperumal Gurukal</p>
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+            Invoke divine blessings with authentic Vedic poojas and powerful homams performed with sacred fire, traditional mantras, and pure devotion. Bring prosperity, health, and harmony into your home — guided by the wisdom of the Siddhars.
+          </p>
+          <div className="mt-4 flex flex-wrap gap-2">
+            <span className="rounded-full bg-[var(--gold)]/15 px-3 py-1 text-[0.65rem] font-bold text-primary ring-1 ring-[var(--gold)]/40">✦ Vedic Tradition</span>
+            <span className="rounded-full bg-[var(--gold)]/15 px-3 py-1 text-[0.65rem] font-bold text-primary ring-1 ring-[var(--gold)]/40">✦ Home & Temple</span>
+            <span className="rounded-full bg-[var(--gold)]/15 px-3 py-1 text-[0.65rem] font-bold text-primary ring-1 ring-[var(--gold)]/40">✦ All Occasions</span>
+          </div>
+          <div className="mt-5 space-y-3">
+            <a
+              href="tel:+918124356824"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[var(--accent)] px-5 py-3.5 text-sm font-bold tracking-wide text-white shadow-soft transition active:scale-[0.98] hover:brightness-110"
+            >
+              <Phone className="h-5 w-5" />
+              Call Now: 8124356824
+            </a>
+            <WhatsAppButton
+              message="Hi Kesavaram, I'd like to enquire about Poojas & Homams by C. Saravanaperumal Gurukal."
+              label="Chat on WhatsApp"
+              variant="gold"
+            />
+          </div>
+        </div>
+      </div>
+
       <div className="mb-4 rounded-2xl bg-gradient-gold p-5 text-center shadow-gold ring-1 ring-[var(--gold)]">
         <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-primary/70">Lead Therapist</p>
         <h2 className="mt-2 font-heading text-xl leading-tight text-primary sm:text-2xl">
