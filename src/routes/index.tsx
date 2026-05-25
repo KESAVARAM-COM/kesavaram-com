@@ -75,7 +75,7 @@ function Home() {
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-gold text-primary shadow-gold">
                   <Youtube className="h-5 w-5" />
                 </div>
-                <p className="mt-3 font-heading text-base text-primary">Kesavaram TV</p>
+                <p className="mt-3 font-heading text-primary text-xl">Kesavaram TV</p>
                 <p className="text-xs text-muted-foreground">Watch on YouTube</p>
               </div>
               <ExternalLink className="h-4 w-4 text-primary/60" />
@@ -120,7 +120,7 @@ function ShortcutCard({ to, icon: Icon, title, subtitle }: { to: string; icon: R
       <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-gold text-primary shadow-gold">
         <Icon className="h-5 w-5" />
       </div>
-      <p className="mt-3 font-heading text-base text-primary">{title}</p>
+      <p className="mt-3 font-heading text-primary text-xl">{title}</p>
       <p className="text-xs text-muted-foreground">{subtitle}</p>
     </Link>
   );
