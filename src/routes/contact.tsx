@@ -38,7 +38,7 @@ function ContactPage() {
     <div className="px-4 pt-6">
       <h1 className="font-heading text-2xl tracking-wide text-primary">Get in Touch</h1>
       <p className="mt-1 text-sm text-muted-foreground">
-        We reply fastest on WhatsApp — usually within minutes.
+        ​call us with mobile number or conduct us on whatsapp
       </p>
 
       <div className="mt-5 space-y-3">
