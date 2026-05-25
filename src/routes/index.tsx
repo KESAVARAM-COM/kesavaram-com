@@ -68,7 +68,7 @@ function Home() {
             href="http://www.youtube.com/@kesavaram252"
             target="_blank"
             rel="noopener noreferrer"
-            className="group col-span-2 rounded-2xl bg-gradient-cream p-4 shadow-soft ring-1 ring-[var(--gold-soft)] transition active:scale-[0.98]"
+            className="group col-span-2 rounded-2xl bg-sky-200 p-4 shadow-soft ring-1 ring-sky-300 transition active:scale-[0.98]"
           >
             <div className="flex items-center justify-between">
               <div>
