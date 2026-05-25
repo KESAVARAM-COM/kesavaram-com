@@ -188,10 +188,10 @@ function ServicesPage() {
       </div>
 
       <div className="mt-5 grid grid-cols-4 gap-2 rounded-2xl bg-gradient-cream p-4 text-center text-[0.65rem] font-semibold text-primary shadow-soft ring-1 ring-[var(--gold-soft)]">
-        <TrustItem label="100% Secure Payments" />
-        <TrustItem label="Fast Service" />
-        <TrustItem label="Genuine Therapists" />
-        <TrustItem label="Easy Reschedule" />
+        <TrustItem icon={ShieldCheck} label="100% Secure Payments" />
+        <TrustItem icon={Clock} label="Fast Service" />
+        <TrustItem icon={UserCheck} label="Genuine Therapists" />
+        <TrustItem icon={Star} label="Easy Reschedule" />
       </div>
     </div>
   );
@@ -206,11 +206,14 @@ function Feature({ icon: Icon, label }: { icon: React.ComponentType<{ className?
   );
 }
 
-function TrustItem({ label }: { label: string }) {
+function TrustItem({ icon: Icon, label }: { icon: React.ComponentType<{ className?: string }>; label: string }) {
   return (
     <div className="flex flex-col items-center gap-1">
-      <div className="h-7 w-7 rounded-full border border-[var(--gold)]/40 bg-[var(--gold)]/15" />
+      <div className="flex h-7 w-7 items-center justify-center rounded-full border border-[var(--gold)]/40 bg-[var(--gold)]/15">
+        <Icon className="h-4 w-4 text-[var(--gold)]" />
+      </div>
       {label}
     </div>
   );
 }
+
