@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ShieldCheck, Leaf, MessageCircle, Sparkles, ShoppingBag, Youtube, ExternalLink, Phone } from "lucide-react";
 import logo from "@/assets/kesavaram-logo-new.png";
 import hero from "@/assets/hero-herbs.jpg";
+import youtubeChannel from "@/assets/youtube-channel.png";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export const Route = createFileRoute("/")({
@@ -68,12 +69,12 @@ function Home() {
             href="http://www.youtube.com/@kesavaram252"
             target="_blank"
             rel="noopener noreferrer"
-            className="group col-span-2 rounded-2xl bg-sky-200 p-4 shadow-soft ring-1 ring-sky-300 transition active:scale-[0.98]"
+            className="group col-span-2 rounded-2xl bg-sky-200 p-4 shadow-[0_8px_24px_-6px_rgba(0,0,0,0.55)] ring-1 ring-black/40 border border-black/30 transition active:scale-[0.98]"
           >
             <div className="flex items-center justify-between">
               <div>
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-gold text-primary shadow-gold">
-                  <Youtube className="h-5 w-5" />
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-gold text-primary shadow-gold overflow-hidden">
+                  <img src={youtubeChannel} alt="Kesavaram YouTube channel" className="h-full w-full object-cover" />
                 </div>
                 <p className="mt-3 font-heading text-primary text-xl">Kesavaram TV</p>
                 <p className="text-xs text-muted-foreground">Watch on YouTube</p>
