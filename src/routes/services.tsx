@@ -3,6 +3,7 @@ import { useState } from "react";
 import { UserCheck, Home, ShieldCheck, Users, Clock, Star, Phone, Flame, Sparkles } from "lucide-react";
 import serviceImg from "@/assets/service-massage.jpg";
 import poojasImg from "@/assets/poojas-homams.jpg";
+import therapistImg from "@/assets/therapist.png";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export const Route = createFileRoute("/services")({
@@ -81,7 +82,13 @@ function ServicesPage() {
       </div>
 
       <div className="mb-4 rounded-2xl bg-gradient-gold p-5 text-center shadow-gold ring-1 ring-[var(--gold)]">
-        <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-primary/70">Lead Therapist</p>
+        <img
+          src={therapistImg}
+          alt="C. Saravanaperumal Varma Asan"
+          loading="lazy"
+          className="mx-auto h-28 w-28 rounded-full object-cover ring-4 ring-[var(--cream)] shadow-soft"
+        />
+        <p className="mt-3 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-primary/70">Lead Therapist</p>
         <h2 className="mt-2 font-heading text-xl leading-tight text-primary sm:text-2xl">
           C. SARAVANAPERUMAL VARMA ASAN
         </h2>
