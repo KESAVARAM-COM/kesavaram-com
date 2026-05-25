@@ -57,7 +57,7 @@ function ContactPage() {
         <ContactRow
           icon={MapPin}
           label="Location"
-          value="Dindigul, Tamil Nadu, India"
+          value="Thennampatti,Dindigul, Tamil Nadu, India"
         />
         <ContactRow
           icon={Mail}
