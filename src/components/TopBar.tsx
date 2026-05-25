@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/kesavaram-logo.png";
+import logo from "@/assets/kesavaram-logo-alt.png";
 
 export function TopBar({ title }: { title?: string }) {
   return (
@@ -7,7 +7,7 @@ export function TopBar({ title }: { title?: string }) {
       <div className="mx-auto flex max-w-xl items-center justify-between px-4 py-3">
         <Link to="/" className="flex items-center gap-2">
           <img src={logo} alt="Kesavaram" className="h-14 w-14 object-contain" width={56} height={56} />
-          <span className="font-heading text-base tracking-[0.18em] text-[var(--gold)]">
+          <span className="font-heading tracking-[0.18em] text-lg text-center">
             KESAVARAM
           </span>
         </Link>
